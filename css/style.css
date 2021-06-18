@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-bottom:0px;
+  font-family: 'Libre Baskerville', serif;
+}
+
+header {
+  font-size: 5em;
+  /* in order to animate an objects position, it must be relative or absolute */
+  position: relative;
+  /* left: 40px; */
+  bottom: 0;
+  opacity: 0;
+  /* border: 1px solid red; */
+  /* display: inline-block; */
+  text-align: center;
+  animation: slider 1s forwards;
+}
+
+@keyframes slider {
+from { bottom:-100px; opacity: 0;}
+to {bottom:0px; opacity: 1;}
+}
+
+header h1 {
+  font-size: 72px;
+  text-transform: uppercase;
+  display: inline;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+header h2 {
+  font-size: 26px;
+  color:#999;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+nav {
+  /* position: fixed; */
+  top:0;
+  left:0;
+  width: 100%;
+  background-color: #333;
+  display:flex;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  /* justify-content: center; */
+}
+
+nav a:link {
+  color: #fff;
+  background-color: #333;
+  padding: 20px;
+  flex-grow: 1;
+  text-align: center;
+  transition: all 1s;
+  /* ^ microinteraction */
+}
+
+nav a:visited {
+  color: #fff;
+  background-color: #333;
+  padding: 20px;
+  text-decoration: underline;
+}
+
+nav a:hover {
+  color:#333;
+  background: #fff;
+
+}
+
+nav a:active {
+  background-color: maroon;
+  color:#eee;
+}
+
+article p {
+  font-family: 'Roboto', sans-serif;  font-size: 18px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.pull {
+  background-color: maroon;
+  font-size: 28px;
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+  margin: 0 50px 20px;
+  color: white;
+  position: relative;
+  animation: shadow-pop-tr 2s
+}
+
+.shadow-pop-tr {
+	-webkit-animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+@-webkit-keyframes shadow-pop-tr {
+  0% {
+    -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+            box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+  }
+  100% {
+    -webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+            box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+    -webkit-transform: translateX(-8px) translateY(8px);
+            transform: translateX(-8px) translateY(8px);
+  }
+}
+@keyframes shadow-pop-tr {
+  0% {
+    -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+            box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+  }
+  100% {
+    -webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+            box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+    -webkit-transform: translateX(-8px) translateY(8px);
+            transform: translateX(-8px) translateY(8px);
+  }
+}
+
+body.india {
+  background-color: orange;
+}
+
+body.italy {
+  background-color: darkgreen;
+}
+
+section.parent {
+  width:100%;
+  min-height: 80vh;
+  height: auto;
+  background: #eee;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+figure {
+   width: 375px;
+   height: 450px;
+   overflow:hidden;
+   position: relative;
+   margin: 10px;
+   transition: all .5s;
+}
+
+section.parent figure:hover {
+  /* background: greenyellow; */
+  color:#333;
+  width: 350px;
+  height: 350px;
+}
+
+figure img {
+  width: 100%;
+}
+
+figure h2 {
+  background: #fff;
+  color:#333;
+  position:absolute;
+  top:20px;
+  right:0;
+  padding:10px;
+}
+
+figure p {
+  background: #fff;
+  color: #333;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-family: 'Roboto', sans-serif;
+  margin: 10px;
+}
+
+
+section.child {
+  width:100%;
+  min-height: 60vh;
+  height: auto;
+  background: #eee;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+}
+
+section.child figure:hover {
+  /* background: greenyellow; */
+  color:#333;
+  width: 550px;
+  height: 550px;
+}
+
+figure.food {
+  width: 575px;
+  height: 350px;
+  overflow:hidden;
+  position: relative;
+  margin: 10px;
+}
+
+section.text {
+  width: 100%;
+  min-height: 50vh;
+  height: auto;
+  display:flex;
+  transition: all .5s;
+}
+
+section article {
+  background: white;
+  width: 65%;
+  padding: 1.2em;
+  font-family: 'Roboto', sans-serif;
+}
+
+section article h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+section article p {
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+}
+
+section aside p {
+  margin: 1.2em;
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+}
+
+section aside {
+  background: darkgreen;
+  width: 35%;
+  padding: 1.2em;
+  transition: all .5s;
+}
+
+section aside h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+figure.italy {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section aside figure.italy:hover {
+  background: greenyellow;
+  color:#333;
+  width: 450px;
+  height: 450px;
+  transition-timing-function: ease-out;
+}
+
+/* @media (max-width: 600px) {
+  body.italy, aside, section.text {
+    flex-direction: column;
+  }
+} */
+
+section.canada {
+  width: 100%;
+  min-height: 50vh;
+  height: auto;
+  display:flex;
+}
+
+section.canada aside {
+  background-color: maroon;
+  width: 50%;
+  padding: 1.2em;
+  font-family: 'Roboto', sans-serif;
+  }
+
+section.canada article {
+  background-color: white;
+  width: 50%;
+  padding: 1.2em;
+  font-family: 'Roboto', sans-serif;
+}
+
+figure.montreal {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 375px;
+height: 250px;
+position: relative;
+animation: tilt-in-top-1 2s
+}
+
+.tilt-in-top-1 {
+	-webkit-animation: tilt-in-top-1 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: tilt-in-top-1 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes tilt-in-top-1 {
+  0% {
+    -webkit-transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+            transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+            transform: rotateY(0deg) translateY(0) skewY(0deg);
+    opacity: 1;
+  }
+}
+@keyframes tilt-in-top-1 {
+  0% {
+    -webkit-transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+            transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+            transform: rotateY(0deg) translateY(0) skewY(0deg);
+    opacity: 1;
+  }
+}
+
+
+figure.poutine {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form {
+  font-family: 'Libre Baskerville', serif;
+}
+
+input[type=text], input[type=submit], input[type=email], input[type=reset], input[type=button] {
+  background-color: lightgrey;
+  font-family: 'Libre Baskerville', serif;
+  border: none;
+  color: black;
+  font-size: 12px;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+video.smvid {
+    width:100%;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-family: georgia, times, serif;
+  font-style: italic;
+  position: relative;
+}
